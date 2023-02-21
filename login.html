@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/VSS.SDK.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="icon" type="assets/x-icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Windhoek</title>
+    <script src="js.js"></script>
+    <script type="text/javascript">
+        VSS.init();
+        VSS.ready(function () {
+            document.getElementById("name").innerText = VSS.getWebContext().user.name;
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <title>Login</title>
+
+    <style>
+        /* Overwrite default styles of hr */
+        hr {
+          border: 1px solid #f1f1f1;
+          margin-bottom: 25px;
+        }
+    
+        /* Set a style for the submit/register button */
+        .registerbtn {
+          background-color: red;
+          color: white;
+          border-radius: 4px;
+          border: none;
+          cursor: pointer;
+          width: 80px;
+          height: 33px;
+        }
+    
+        .registerbtn:hover {
+          opacity: 1;
+        }
+    
+        /* Add a blue text color to links */
+        a {
+          color: dodgerblue;
+        }
+    
+        /* Add a black background color to the top navigation bar */
+        .topnav {
+          overflow: hidden;
+          background-color: red;
+          ;
+        }
+    
+        /* Style the links inside the navigation bar */
+        .topnav a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+    
+        /* Style the search box inside the navigation bar */
+        .topnav input[type=text] {
+          float: right;
+          padding: 6px;
+          border: none;
+          margin-top: 8px;
+          margin-right: 16px;
+          font-size: 17px;
+          width: 50%;
+        }
+    
+        footer {
+          text-align: center;
+          padding: 3px;
+          background-color: #ccc;
+          color: black;
+        }
+    
+        .dropdown-work {
+          align-items: center;
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          width: 100%;
+        }
+      </style>
+    
+    
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">| Powered by Debuggers</a>
+        <a href="#about"></a>
+        <a href="#contact"></a>
+      </div>
+
+    <section class="container d-flex flex-column justify-content-center align-items-center" style="margin-top: 3em;">
+        <div class="text-center mb-3">
+            <p id="invalid-credentials" class="text-danger d-none">* Email or Password Incorrect</p>
+        </div>
+        <div>
+            <div class="px-5" style="height: 500px; width: min-content; min-width: 450px; box-shadow: 0px 0px 6px 1px black; display: flex; flex-direction: column; text-align: center;">
+                <div class="pt-2">
+                    <img src="assets/logo.png" alt="Jetpack Logo">
+                </div>
+                <div class="my-2 mb-3 pt-1 fs-5">
+                    <strong>Login to use Extension</strong>
+                </div>
+                <a id="with-devops" href="#" style="outline: 0.1px solid gray; padding: 2px; text-decoration: none; color: black;">
+                    <img style="height: 1.5em;" class="px-2" src="https://cdn.iconscout.com/icon/free/png-256/azure-devops-3628645-3029870.png" alt="">
+                    Continue with Azure Devops Account
+                </a>
+                <div class="mb-2">
+                    <hr class="p-0 mt-3 mb-0 ">
+                    OR
+                </div>
+                <div>
+                    <form action="POST" class="" onsubmit="return validate()">
+                        <div class="d-flex flex-column">
+                            <label for="email">Email address</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="my-2 d-flex flex-column">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
+                        </div>
+                        <div class="mt-4">
+                            <input type="checkbox" name="remember-me" id="remember-me">
+                            Remember me for 30 days
+                        </div>
+                        <div class="mt-3">
+                            <button id="submit" type="button" class="registerbtn">Login</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="mt-4 pt-2">
+                    <hr class="p-0 m-0">
+                    First time here?
+                    <a href="register.html">Create account</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section style="position: absolute; bottom: 0; left: 0; right: 0;">
+    <footer>
+      <a href="#" class="text-dark">Terms & Privacy</a>.</p>
+      <p>Author: Debuggers</p>
+      <p><a class="text-dark" href="debuggers.com">debuggers@gmail.com</a></p>
+    </footer>
+  </section>
+
+  <script>
+    function writeCookie(){
+      
+    }
+    function validate(){
+        if($("#email").val() == ""){
+            alert("Please Enter a valid Email");
+            return false;
+        }
+        else if($("#password").val() == ""){
+            alert("Please Enter a valid Password");
+            return false;
+        }
+        else
+        return true;
+    }
+    $("#submit").click(function (){
+        $.ajax({
+            type: "POST",
+            url: "https://adextensionapi.azurewebsites.net/api/Login",
+            contentType: 'application/json',
+            data: JSON.stringify({
+                email: $("#email").val(),
+                password: $("#password").val()
+            }),
+            success: function (res) {
+                location.replace("home.html");
+            },
+            error: function (res) {
+                console.log(res.responseJSON)
+                var attr = document.getElementById("invalid-credentials");
+                attr.classList.remove("d-none");
+            }
+        });
+    });
+    $("#with-devops").click(function (){
+        var emailaddress = VSS.getWebContext().user.email;
+        $.ajax({
+        type: "GET",
+        url: "https://adextensionapi.azurewebsites.net/api/IndividualByEmail?email=" + emailaddress,
+        success: function (data) {
+          writeCookie(emailaddress);
+          location.replace("home.html");
+        },
+        error: function (data) {
+            alert("User nor registered.\nContinue to register?")
+            location.replace("register.html");
+        }
+      });
+    });
+
+  </script>
+</body>
+
+</html>
